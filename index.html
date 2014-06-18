@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>cScroller</title>
+
+<!-- jQuery v2 -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+		
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type='text/javascript'>
+
+		var fileToUse = ['/cscroller/js/main.js',
+		    'css/style.css',
+		    'index.html',
+		    'texts/colormath.js',
+		    'texts/auton.c',
+		    'texts/login.notadamnphpfile',
+		    'texts/foxy.txt',
+		    'texts/villa7.txt'];
+
+		typ.file = fileToUse[Math.round(Math.random() * fileToUse.length)];
+		console.log('Using file "' + typ.file + '"');
+
+        typ.init();
+    </script>
+
+
+  </head>
+	<body>
+
+		<div class="console">
+
+		</div>
+
+		<div class="debug">
+		Debug box
+		</div>
+
+    </body>
+</html>
