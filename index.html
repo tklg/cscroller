@@ -23,18 +23,32 @@
 
     <script type='text/javascript'>
 
+    $(document).ready(function() {
+
 		var fileToUse = ['/cscroller/js/main.js',
 		    'css/style.css',
 		    'index.html',
 		    'texts/colormath.js',
-		    'texts/login.notadamnphpfile',
+		    'texts/login.notaphpfile',
 		    'texts/foxy.txt',
-		    'texts/villa7.txt'];
+		    'texts/villa7.txt',
+		    'texts/readme.md'];
 
-		typ.file = fileToUse[Math.round(Math.random() * fileToUse.length)];
+		//var fileToUse = ['texts/test.txt'];
+
+		var rand = Math.floor(Math.random() * fileToUse.length);
+
+		typ.file = fileToUse[rand];
+		console.log('Using random: ' + rand);
 		console.log('Using file "' + typ.file + '"');
 
         typ.init();
+
+        if (window.location.search) {
+        	col.entercolpre(getParamByName('b'), getParamByName('t')); //init with querystring
+        }
+    });
+
     </script>
 
 
@@ -46,7 +60,26 @@
 		</div>
 
 		<div class="debug">
-		Debug box
+		Hello world!
+		</div>
+
+		<div class="readme">
+		<h2>cScroller</h2>
+		<p>Press D for debuggy thing<br>
+		Press again to hide.</p>
+		<p>Press C to choose colors<br>
+		Then set the colors with 2 hex digits<br>
+		(e.g. 1 then a for blue background and green text)<br>
+		or enter then into the url for use as a screensaver.</p>
+		</div>
+
+		<div class="colorpicker">
+			<div class="clr" id="clr-b">
+			Background Color
+			</div>
+			<div class="clr" id="clr-t">
+			Text Color
+			</div>
 		</div>
 
     </body>

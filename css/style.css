@@ -14,3 +14,36 @@
 	color: #0F0;
 	display: none;
 }
+
+.readme {
+	position: fixed;
+	width: auto;
+	top: 50px;
+	right: 30px;
+	display: none;
+	color: #c35817;
+}
+
+.colorpicker {
+	position: fixed;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	top: 200px;
+	color: #aaa;
+	padding: 40px;
+	display: none;
+}
+
+.colorpicker > .clr {
+	width: 48%;
+	float: left;
+	height: 100px;
+	margin: 0px 2px 0px 2px;
+	position: relative;
+	border: #aaa 1px solid;
+	border-radius: 15px;
+	text-align: center;
+	line-height: 100px;
+	vertical-align: middle;
+}
