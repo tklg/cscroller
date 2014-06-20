@@ -269,6 +269,15 @@ checkFinish = function() {
         typ.index = 0;
         typ.file = '';
 
+        var fileToUse = ['/cscroller/js/main.js',
+            'css/style.css',
+            'index.html',
+            'texts/colormath.js',
+            'texts/login.notaphpfile',
+            'texts/foxy.txt',
+            'texts/villa7.txt',
+            'texts/readme.txt'];
+
         var rand = Math.floor(Math.random() * fileToUse.length);
 
         typ.file = fileToUse[rand];
