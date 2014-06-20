@@ -263,6 +263,8 @@ checkFinish = function() {
 
         $('.console').empty();
 
+        clearInterval(tID);
+
         typ.text = null;
         typ.cTimer = null;
         typ.tID = null;
