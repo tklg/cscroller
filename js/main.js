@@ -228,12 +228,10 @@ var col = {
         if (t == 'f') {this.setTextC('#FFF'); } //white
     },
     setBackground: function(hex) {
-        console.log('setbg ' + hex);
         this.bg = hex;
         $('body').css('background', hex);
     },
     setTextC: function(hex) {
-        console.log('settextc ' + hex);
         this.text = hex;
         $('.console').css('color', hex);
     }
@@ -261,7 +259,10 @@ checkFinish = function() {
 
     if (content == prevcontent) {
 
-        $('.console').empty();
+        $('.console').fadeOut(500, function() {
+            $('.console').empty();
+            $('.console').css('display','block');    
+        });
 
         clearInterval(tID);
 
@@ -298,4 +299,4 @@ getParamByName = function(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-console.log(getParamByName('b'), getParamByName('t'));
+console.log('Using preset colors: Background = ' + getParamByName('b') + ', Text = ' + getParamByName('t'));
