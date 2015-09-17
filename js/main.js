@@ -272,14 +272,15 @@ checkFinish = function() {
         typ.index = 0;
         typ.file = '';
 
-        var fileToUse = ['/cscroller/js/main.js',
-            'css/style.css',
+        var fileToUse = ['js/main.js',
             'index.html',
-            'texts/colormath.js',
-            'texts/login.notaphpfile',
-            'texts/foxy.txt',
-            'texts/villa7.txt',
-            'texts/readme.txt'];
+            'texts/colorhelper_colormath.txt',
+            'texts/foxfile_browse.txt',
+            'texts/foxfile_js.txt',
+            'texts/foxfileapp_browse.txt',
+            'texts/ftc2013_auton.txt',
+            'texts/v7_index.txt',
+            'texts/wordclock_js.txt'];
 
         var rand = Math.floor(Math.random() * fileToUse.length);
 
