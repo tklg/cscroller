@@ -18,6 +18,16 @@ $(
 	}
 );
 
+var fileToUse = ['js/main.js',
+            'index.html',
+            'texts/colorhelper_colormath.txt',
+            'texts/foxfile_browse.txt',
+            'texts/foxfile_js.txt',
+            'texts/foxfileapp_browse.txt',
+            'texts/ftc2013_auton.txt',
+            'texts/v7_index.txt',
+            'texts/wordclock_js.txt'];
+
 var disDbg = false;
 var checkRestart, content, prevcontent = null;
 var typspeed = 35;
@@ -271,16 +281,6 @@ checkFinish = function() {
         typ.tID = null;
         typ.index = 0;
         typ.file = '';
-
-        var fileToUse = ['js/main.js',
-            'index.html',
-            'texts/colorhelper_colormath.txt',
-            'texts/foxfile_browse.txt',
-            'texts/foxfile_js.txt',
-            'texts/foxfileapp_browse.txt',
-            'texts/ftc2013_auton.txt',
-            'texts/v7_index.txt',
-            'texts/wordclock_js.txt'];
 
         var rand = Math.floor(Math.random() * fileToUse.length);
 
