@@ -11,7 +11,7 @@
 
 	<script src="js/main.js"></script>
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/hack-extended.min.css">
 	<link rel="stylesheet" href="css/style.css">
 		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,9 @@
         typ.init();
 
         if (window.location.search) {
+        	if (getParamByName('b') != '' && getParamByName('t') != '')
         	col.entercolpre(getParamByName('b'), getParamByName('t')); //init with querystring
+
         }
     });
 
@@ -47,6 +49,7 @@
 		<div class="console">
 
 		</div>
+		<!-- <span class="pipe">|</span> -->
 
 		<div class="debug">
 		Hello world!

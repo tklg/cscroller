@@ -1,12 +1,18 @@
-﻿body {
+﻿html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
     background: #000;
     color: #0F0;
-    font-size: 12px;
-    font-family: 'Source Code Pro', sans-serif;
+    font-size: 9pt;
+    font-family: 'Hack', monospace;
     overflow: hidden;
     /*font-family: monospace;*/
 }
-
 .debug {
 	right: 30px;
 	top: 30px;
@@ -14,7 +20,6 @@
 	color: #c35817;
 	display: none;
 }
-
 .readme {
 	position: fixed;
 	width: auto;
@@ -23,7 +28,6 @@
 	display: none;
 	color: #c35817;
 }
-
 .colorpicker {
 	position: fixed;
 	width: 500px;
@@ -34,7 +38,6 @@
 	padding: 40px;
 	display: none;
 }
-
 .colorpicker > .clr {
 	width: 48%;
 	float: left;

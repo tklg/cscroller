@@ -17,6 +17,13 @@ $(
 		);
 	}
 );
+getParamByName = function(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+console.log('Using preset colors: Background = ' + getParamByName('b') + ', Text = ' + getParamByName('t'));
 
 var fileToUse = ['js/main.js',
             'index.html',
@@ -30,7 +37,7 @@ var fileToUse = ['js/main.js',
 
 var disDbg = false;
 var checkRestart, content, prevcontent = null;
-var typspeed = 35;
+var typspeed = parseInt(getParamByName('delay')) || 35;
 var canSetClr = false;
 
 var typ = {
@@ -50,7 +57,7 @@ var typ = {
             clearInterval(cTimer);
             tID = setInterval(function() {
                 typ.addText(1);
-            }, 35/*typspeed*/);
+            }, typspeed);
         }, 3000); //blink the cursor for 3 sec
 
         setTimeout(function() {
@@ -292,12 +299,3 @@ checkFinish = function() {
     }
 
 }
-
-getParamByName = function(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-console.log('Using preset colors: Background = ' + getParamByName('b') + ', Text = ' + getParamByName('t'));
