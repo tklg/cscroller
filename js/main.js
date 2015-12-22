@@ -1,5 +1,4 @@
 ﻿/*
-* (c) Copyright 2014 Theodore Kluge. Some Rights Reserved. 
 * This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License
 */
 
